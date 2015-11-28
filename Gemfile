@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.2.2'
+
 gem 'rails', '4.2.5'
 gem 'pg', '~> 0.18.3'
 gem 'jquery-rails', '~> 4.0.5'
@@ -26,7 +28,6 @@ group :development, :test do
   gem 'faker', '~> 1.5.0'
   gem 'factory_girl_rails', '~> 4.5.0'
   gem 'rspec-rails', '~> 3.3.3'
-  gem 'database_cleaner'
 end
 
 group :development do
@@ -37,6 +38,7 @@ group :test do
   gem 'shoulda-matchers'
   gem 'capybara'
   gem 'poltergeist'
+  gem 'database_cleaner'
 end
 
 group :production do

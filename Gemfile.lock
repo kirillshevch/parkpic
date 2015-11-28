@@ -54,8 +54,7 @@ GEM
       sass (>= 3.3.0)
     bower-rails (0.10.0)
     builder (3.2.2)
-    byebug (5.0.0)
-      columnize (= 0.9.0)
+    byebug (8.2.1)
     cancancan (1.12.0)
     capybara (2.5.0)
       mime-types (>= 1.16)
@@ -76,7 +75,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
-    columnize (0.9.0)
     database_cleaner (1.5.1)
     devise (3.5.2)
       bcrypt (~> 3.0)
