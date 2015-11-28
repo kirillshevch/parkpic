@@ -5,4 +5,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :comments
   has_many :photos
+  mount_uploader :avatar, PictureUploader
+
+  def to_json(arg)
+    ::Api::UserSerializer.new(self).to_json
+  end
 end
