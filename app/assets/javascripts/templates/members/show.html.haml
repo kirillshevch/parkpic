@@ -1,10 +1,12 @@
+%h1(ng-show="user == member") Your profile
+%member-info(user="member")
 .clearfix
   .clearfix
-    %span(ng-repeat="photo in photos track by $index")
+    %span(ng-repeat="photo in member.photos track by $index")
       .col-xs-3
         .text-line
           .userpic
-            %img(ng-src="{{::photo.image_url}}")
+            %img(ng-src="{{::photo.file.url}}")
       .col-12(ng-if="($index + 1) % 4 == 0")
 
   .gutter-vertical-2x
