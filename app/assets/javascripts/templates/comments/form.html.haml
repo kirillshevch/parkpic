@@ -1,0 +1,19 @@
+.gutter-vertical-sm.comment-form
+  .clearfix
+  .comment-wrapper
+    .gutter-top-sm
+      .gutter-horizontal
+        .tbl
+          .tbl-cell.comment-pic.align-top
+            = image_tag "user.svg", class: 'img-userpic'
+          .tbl-cell.cell-12.position-relative
+            .clearfix
+              %div( emoji-form emoji-message="emojiMessage" conainer="body")
+                %textarea#messageInput.form-control(ng-model="msg")
+                .clearfix.text-sm.color-light.text-right
+                  Press
+                  %b Enter
+                  to submit
+                .comment-icons
+                  %span#emojibtn.link-base.cursor-pointer
+                    = icon :smile, class: 'text-md smile gutter-left-xs line-md gutter-top-xs'

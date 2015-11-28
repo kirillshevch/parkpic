@@ -16,5 +16,12 @@
 //= require angular-strap/dist/modules/tooltip
 //= require angular-strap/dist/modules/popover
 //= require ng-file-upload/ng-file-upload-all
+//= require angular-emoji-popup/app
+//= require angular-emoji-popup/config
+//= require angular-emoji-popup/emojiDirectives
+//= require angular-emoji-popup/emojiFilters
+//= require angular-emoji-popup/jquery.emojiarea
+//= require angular-emoji-popup/nanoscroller
+//= require angular-emoji-popup/util
 //= require app
 //= require_tree ./templates

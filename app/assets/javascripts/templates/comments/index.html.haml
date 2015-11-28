@@ -1,0 +1,9 @@
+.comments
+  .comment
+    %comments-form(commentable-type="commentableType" commentable-id="commentableId")
+    .blankstate(ng-if="comments.length == 0")
+      .gutter-vertical-2x
+        Now comments yet
+    .clearfix(ng-if="comments.length > 0")
+      %span(ng-repeat="comment in $parent.comments | orderBy:'path' track by comment.id")
+        %comments-show(comment="comment")

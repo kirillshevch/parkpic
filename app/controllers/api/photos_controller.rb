@@ -5,4 +5,8 @@ class Api::PhotosController < ApiController
     response = {count: @photos.count, photos: serialize_objects(@photos.page(params[:page]).per(25), Api::PhotoSerializer), page: params[:page] }
     respond_with response
   end
+
+  def show
+    respond_with @photo, serializer: Api::PhotoShowSerializer
+  end
 end

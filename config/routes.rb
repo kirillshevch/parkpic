@@ -16,5 +16,6 @@ Rails.application.routes.draw do
     resources :users
     resources :comments
     resources :photos
+    resources :comments
   end
 end

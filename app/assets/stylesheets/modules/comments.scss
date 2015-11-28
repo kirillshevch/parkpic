@@ -1,0 +1,66 @@
+.comment {
+  position: relative;
+  &-icons {
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    color: #ccc; 
+    padding-right: 6px;
+  }
+  &-pic {
+    width: 3.5em;
+    height: auto;
+    img {
+      width: 2.5em;
+    }
+  }
+  &-content {
+    width: 100%;
+  }
+  &-meta {
+    display: inline-block;
+    margin-left: 0.5em;
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 0.875em;
+  }
+  &-author {
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.87);
+    font-weight: bold;
+    &:hover {
+      color: $link-color;
+    }
+  }
+  &-body {
+    font-size: 1em;
+    word-wrap: break-word;
+    color: rgba(black, 0.87);
+    line-height: 1.3;
+    .img {
+      margin: 0 0 0 3px;
+    }
+  }
+  &-actions {
+    font-size: 0.875em;
+    a {
+      color: #ccc;
+      &:hover {
+        color: $link-color;
+      }
+    }
+  }
+  &-wrapper {
+    float: left;
+    width: 100%;
+  }
+  &-form {
+    background: rgba(black, 0.02);
+    @include scope((
+      "border-bottom",
+      "border-light",
+    ));
+  }
+}
+.emoji-menu {
+  z-index: 2020!important;
+}

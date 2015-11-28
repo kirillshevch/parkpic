@@ -4,7 +4,6 @@ class Api::UsersController < ApiController
   end
 
   def update
-    debugger
     respond_with @user.update(user_params)
   end
 
