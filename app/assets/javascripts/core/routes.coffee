@@ -17,6 +17,14 @@ angular.module('app.core')
         templateUrl: 'settings/settings.html',
         controller: 'settingsCtrl'
 
+      .when '/members',
+        templateUrl: 'members/index.html',
+        controller: 'membersIndexCtrl'
+
+      .when '/members/:id',
+        templateUrl: 'members/show.html',
+        controller: 'membersShowCtrl'
+
       .otherwise
         redirectTo: '/'
   ])
