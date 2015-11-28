@@ -19,12 +19,14 @@ gem 'angular-rails-templates', '~> 0.2.0'
 gem 'active_model_serializers', '~> 0.9.3'
 gem 'puma', '~> 2.14.0'
 gem 'responders', '~> 2.1.0'
+
 group :development, :test do
-  gem 'pry-byebug', '~> 3.2.0'
+  gem 'byebug'
   gem 'habtm_generator', '~> 0.3'
   gem 'faker', '~> 1.5.0'
   gem 'factory_girl_rails', '~> 4.5.0'
   gem 'rspec-rails', '~> 3.3.3'
+  gem 'database_cleaner'
 end
 
 group :development do
