@@ -5,6 +5,7 @@
 @import "mixins/font_face";
 @import "mixins/forms";
 @import "mixins/shapes";
+@import "mixins/utilities";
 
 @import "variables/colors";
 @import "variables/gutter";
@@ -23,9 +24,12 @@
 @import "components/utilities";
 @import "components/layout";
 @import "components/links";
+@import "components/smile";
 
 @import "icomoon/main";
 @import "icomoon/icons";
 
 @import "modules/aside";
 @import "modules/userpic";
+@import "modules/comments";
+@import "emoji";
