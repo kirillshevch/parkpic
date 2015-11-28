@@ -14,9 +14,12 @@
           %a.navbar-brand(href="#") Parkpic
         .collapse.navbar-collapse
           %ul.nav.navbar-nav.pull-right
-            %li(ng-hide="user" ng-href="/sign_up") "Sign up"
-            %li(ng-hide="user" ng-href="/sign_in") "Sign in"
-            %li(ng-show="user" ng-href="/logout") "Sign_out"
+            %li(ng-hide="user")
+              %a(ng-href="/sign_up") Sign up
+            %li(ng-hide="user")
+              %a(ng-href="/sign_in") Sign in
+            %li(ng-show="user")
+              %a(ng-href="/sign_in" ng-click="logout()") Sign out
     .container(ng-view)
       %footer
         %p &copy; Parkpic 2015
