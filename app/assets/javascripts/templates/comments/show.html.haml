@@ -1,0 +1,18 @@
+.comment.gutter-top-sm(ng-style="{'padding-left':(comment.tread_level * 15) + 'px'}")
+  .clearfix
+    .tbl
+      .tbl-cell.comment-pic.align-top
+        %a(href)= image_tag "user.svg"
+      .tbl-cell.comment-content.align-top
+        .comment-wrapper
+          .text-sm
+            %a.comment-author(href) Гость
+            %span.comment-meta
+              {{::comment.created_at | date:"dd/MM/yyyy 'в' HH:mm"}}
+          .comment-body(ng-bind-html="::comment.body | colonToSmiley")
+          .comment-actions.text-sm(ng-init="reply=false")
+            %a.reply(href ng-click="reply=!reply") 
+              %span(ng-if="!reply") Reply
+              %span(ng-if="reply") Close
+  .gutter-top-sm.gutter-right(ng-if="reply")
+    %comments-form(commentable-type="$parent.commentableType" commentable-id="$parent.commentableId" comment-id="$parent.comment.id" suffix="_reply")

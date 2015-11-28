@@ -1,0 +1,15 @@
+.gutter-right
+  .col-12
+    %div( emoji-form emoji-message="emojiMessage")
+      %textarea#messageInput.form-control(ng-model="$parent.msg")
+      .clearfix.text-sm.color-light.text-right
+        Press
+        %b Enter
+        to submit
+      .comment-icons
+        %span.cursor-pointer.link-base(ngf-select="" ng-model="$parent.picFile" name="file" accept="image/*") 
+          = icon :camera, class: 'smile gutter-left-xs line-md'
+        %span#emojibtn.link-base.cursor-pointer
+          = icon :select_smile, class: 'smile gutter-left-xs line-md'
+  .gutter-top-sm(ng-if="$parent.picFile")
+    %img.img-preview(ngf-src="$parent.$parent.picFile")

@@ -32,3 +32,16 @@
     position: relative;
   }
 }
+.position {
+  @each $position in (relative, static, absolute, fixed){
+    &-#{$position}{
+      position: $position;
+    }
+  }
+}
+.cover {
+  @extend .position-absolute;
+  @each $side in $sides-common {
+    #{$side}: 0; 
+  }
+}

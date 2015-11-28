@@ -1,3 +1,8 @@
+.#{$icomoon-prefix}-smile { 
+  &:before {
+    content: $icon-smile;
+  }
+}
 .#{$icomoon-prefix}-angle-down { 
   &:before {
     content: $icon-angle-down;

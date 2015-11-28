@@ -1,0 +1,7 @@
+.clearfix
+  .clearfix.text-center
+    %img(style='max-width: 100%;' ng-src="{{::photo.image_url}}")
+  .gutter-vertical(ng-if="photo.short_text")
+    .text-sm {{::photo.short_text}}
+  .gutter-vertical
+    %comments-index(comments="comments" commentable-id="photo.id" commentable-type="'Photo'")
