@@ -18,4 +18,9 @@
     content: $icon-angle-left;
   }
 }
+.#{$icomoon-prefix}-palm { 
+  &:before {
+    content: $icon-palm;
+  }
+}
 

@@ -10,12 +10,3 @@
     font-style: $style;
   }
 }
-@mixin font-face2($name, $filename, $weight: normal, $style: normal, $prefix: '', $ttf-pref: '') {
-  @font-face {
-    font-family: $name;
-    src: url(asset-path('#{$name}/#{$filename}#{$prefix}.woff')) format('woff'),
-         url(asset-path('#{$name}/#{$filename}#{$prefix}.ttf#{$ttf-pref}')) format('truetype');
-    font-weight: $weight;
-    font-style: $style;
-  }
-}
