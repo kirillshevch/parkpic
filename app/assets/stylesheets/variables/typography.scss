@@ -1,21 +1,10 @@
-$font-size-base: 16px;
-
-$font-family-sans-serif: "Arsenal", sans-serif;
+$font-size-base: 14px;
+$font-family-sans-serif: "Roboto", sans-serif;
 $font-family-base: $font-family-sans-serif;
-
-$fw-norm: 400;
-$fw-bold: 700;
-
 $font-weights: (
-  (norm, $fw-norm),
-  (semi, $fw-norm),
-  (bold, $fw-bold),
+  (light, 300),
+  (norm, 400),
+  (semi, 500),
+  (bold, 700)
 );
-
-
 $link-hover-decoration: none;
-
-$typo-presets: (text, head, title);
-$typo-start: 0.6em;
-$typo-steps: (xs, sm, norm, md, lg);
-$product-card-font-size: 1.3rem;

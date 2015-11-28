@@ -1,19 +1,25 @@
-.tbl {
+.table {
+  margin: 0;
+  padding: 0;
+  &.fixed {
+    table-layout: fixed;
+  }
   display: table;
   height: 100%;
   width: 100%;
-  table-layout: fixed;
   &-cell {
     display: table-cell;
     height: 100%;
-    width: auto;
+    width: 100%;
+    &.auto {
+      width: auto;
+    }
   }
 }
-
 .cell {
-  @for $i from 1 to $grid-columns + 1 {
+  @for $i from 1 to 13 {
     &-#{$i}{
-      width: percentage($i / $grid-columns);
+      width: percentage($i / 12);
     }
     &-#{$i}em {
       width: #{$i}em;
