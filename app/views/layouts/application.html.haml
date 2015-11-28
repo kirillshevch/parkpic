@@ -17,10 +17,16 @@
         .gutter-horizontal.font-light.text-md
           .gutter-vertical.row-horizontal
             .border-top.border-wheat
-              .gutter-horizontal.border-bottom.border-wheat
-                %a.gutter-vertical-sm.col-12(href="/profile") My Profile
-              .gutter-horizontal.border-bottom.border-wheat
-                %a.gutter-vertical-sm.col-12(href="/users") Users
+              .gutter-horizontal.border-bottom.border-wheat(ng-if="!user")
+                %a.gutter-vertical-sm.col-12(ng-href="/sign_in") Sign in
+              .gutter-horizontal.border-bottom.border-wheat(ng-if="!user")
+                %a.gutter-vertical-sm.col-12(ng-href="/sign_up") Sign up
+              .gutter-horizontal.border-bottom.border-wheat(ng-if="user")
+                %a.gutter-vertical-sm.col-12(ng-href="/profile") My Profile
+              .gutter-horizontal.border-bottom.border-wheat(ng-if="user")
+                %a.gutter-vertical-sm.col-12(ng-href="/users") Users
+              .gutter-horizontal.border-bottom.border-wheat(ng-if="user")
+                %a.gutter-vertical-sm.col-12(ng-href="/sign_in" ng-click="logout()") Sign out
       .table-cell.auto.content-center.align-top.relative.bg-white
         .table.fixed
           .table-cell.gutter-vertical.gutter-horizontal(ng-view)
