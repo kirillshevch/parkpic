@@ -6,7 +6,7 @@ FactoryGirl.define do
     about { Faker::Lorem.sentence }
     password 'testing1'
     password_confirmation 'testing1'
-    photos { create_list(:photo, 1) }
+    photos { create_list(:photo, 120) }
   end
 
 end
