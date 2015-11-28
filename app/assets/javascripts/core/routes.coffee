@@ -13,6 +13,10 @@ angular.module('app.core')
         templateUrl: 'auth/sign_in.html',
         controller: 'sessionsCtrl'
 
+      .when '/settings',
+        templateUrl: 'settings/settings.html',
+        controller: 'settingsCtrl'
+
       .when '/members',
         templateUrl: 'members/index.html',
         controller: 'membersIndexCtrl'
@@ -21,7 +25,6 @@ angular.module('app.core')
         templateUrl: 'members/show.html',
         controller: 'membersShowCtrl'
 
-        
       .otherwise
         redirectTo: '/'
   ])

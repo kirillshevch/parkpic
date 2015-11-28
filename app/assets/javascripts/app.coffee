@@ -2,6 +2,7 @@
 //= require ./core/core
 //= require ./auth/auth
 //= require ./pages/pages
+//= require ./settings/settings
 //= require ./shared/shared
 
 underscore = angular.module('underscore', [])
@@ -24,6 +25,7 @@ angular.module 'app', [
   "app.shared"
   "app.pages"
   "app.auth"
+  "app.settings"
 ]
 
 angular

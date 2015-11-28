@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'home#index'
   get :sign_in, to: "home#index"
   get :sign_up, to: "home#index"
+  get :settings, to: "home#index"
 
   [ "photos",
     "members",
@@ -15,5 +16,5 @@ Rails.application.routes.draw do
     resources :users
     resources :comments
     resources :photos
-  end  
-end  
+  end
+end
