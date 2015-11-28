@@ -1,0 +1,21 @@
+.#{$icomoon-prefix}-angle-down { 
+  &:before {
+    content: $icon-angle-down;
+  }
+}
+.#{$icomoon-prefix}-angle-up { 
+  &:before {
+    content: $icon-angle-up;
+  }
+}
+.#{$icomoon-prefix}-angle-right { 
+  &:before {
+    content: $icon-angle-right;
+  }
+}
+.#{$icomoon-prefix}-angle-left { 
+  &:before {
+    content: $icon-angle-left;
+  }
+}
+
