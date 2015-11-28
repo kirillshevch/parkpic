@@ -1,7 +1,7 @@
 mainCtrl = ($scope, $rootScope)->
   mainCtrl = ->
   ($scope, Auth, $location, $rootScope) ->
-    if window.anonimusUser
+    if window.anonymousUser
       $scope.ready = true
       $scope.isAuthenticated = false
       $rootScope.user = null
