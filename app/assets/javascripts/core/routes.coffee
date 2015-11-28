@@ -13,6 +13,14 @@ angular.module('app.core')
         templateUrl: 'auth/sign_in.html',
         controller: 'sessionsCtrl'
 
+      .when '/members',
+        templateUrl: 'members/index.html',
+        controller: 'membersIndexCtrl'
+
+      .when '/members/:id',
+        templateUrl: 'members/show.html',
+        controller: 'membersShowCtrl'
+
         
       .otherwise
         redirectTo: '/'
