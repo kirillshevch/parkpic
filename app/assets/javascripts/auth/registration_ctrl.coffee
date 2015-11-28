@@ -7,7 +7,7 @@ registrationCtrl = ->
 
     $scope.addUser = ->
       Auth.register($scope.signupData).then ((registeredUser) ->
-        $rootScope.user = registeredUser
+        $rootScope.user = registeredUser.user
         $location.path('/')
       ), (error) ->
         $scope.error = error

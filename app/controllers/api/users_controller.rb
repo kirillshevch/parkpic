@@ -4,7 +4,8 @@ class Api::UsersController < ApiController
   end
 
   def update
-    respond_with @user.update(user_params)
+    @user.update(user_params)
+    render json: @user, serializer: Api::UserSerializer
   end
 
   def show

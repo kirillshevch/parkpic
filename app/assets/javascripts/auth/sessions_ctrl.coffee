@@ -7,7 +7,7 @@ sessionsCtrl = ->
 
     $scope.signIn = ->
       Auth.login($scope.signinData).then ((user) ->
-        $rootScope.user = user
+        $rootScope.user = user.user
         $location.path '/'
       ), (error) ->
         $scope.error = error
