@@ -1,16 +1,17 @@
-%div
-  %h2
-    First name
-    %input(type="text" ng-model="user.first_name" auto-save-input="update()")
-%div
-  %h2
-    Last name
-    %input(type="text" ng-model="user.last_name" auto-save-input="update()")
-%div
-  %h2
-    About
-    %textarea(ng-model="user.about" auto-save-input="update()")
-%div
-  %h2
-    Email
-    %input(type="text" ng-model="user.email" auto-save-input="update()")
+.settings-form
+  .todo-head.settings-head
+    .todo-list-name
+      %p Settings
+  .todo-form.settings-body
+    .form-group
+      %img(ng-src="user.avatar.url || user.picAvatar" ng-if="user.avatar.url || user.picAvatar")
+      %span(ngf-select="uploadAvatar(user.id)" ng-model="user.picAvatar" name="file" accept="image/*")
+        Change avatar
+    .form-group
+      %input.todo-input.form-control(type="text" ng-model="user.first_name" auto-save-input="update()" placeholder="First name")
+    .form-group
+      %input.todo-input.form-control(type="text" ng-model="user.last_name" auto-save-input="update()" placeholer="Last name")
+    .form-group
+      %textarea.todo-input.form-control(ng-model="user.about" auto-save-input="update()" placeholder="About")
+    .form-group
+      %input.todo-input.form-control(type="email" ng-model="user.email" auto-save-input="update()" placeholer="Email")

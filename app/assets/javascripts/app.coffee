@@ -19,13 +19,13 @@ angular.module 'app', [
   "ngRoute"
   "ngSanitize"
   "templates"
-  "ngFileUpload"
   "underscore"
   "app.core"
   "app.shared"
   "app.pages"
   "app.auth"
   "app.settings"
+  "ngFileUpload"
 ]
 
 angular
