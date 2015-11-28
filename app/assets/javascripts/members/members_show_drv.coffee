@@ -1,8 +1,7 @@
 angular.module "app.members"
-  .directive('member-info', ->
+  .directive('memberInfo', ->
     restrict: 'E'
     templateUrl: 'members/info.html'
-    scope: {
-      user: '&'
-    }
+    link: (scope, rootScope) ->
+      console.log(scope.user)
   )
