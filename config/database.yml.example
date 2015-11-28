@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  encoding: unicode
+  timeout: 5000
+  user: user
+  password: password
+
+development:
+  <<: *default
+  database: spa_app_dev
+
+test:
+  <<: *default
+  database: spa_app_test
+
+production:
+  <<: *default
+  database: spa_app_production
