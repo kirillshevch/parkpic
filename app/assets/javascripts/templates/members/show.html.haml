@@ -1,1 +1,11 @@
-%h1 Users Show
+.clearfix
+  .clearfix
+    %span(ng-repeat="photo in photos track by $index")
+      .col-xs-3
+        .text-line
+          .userpic
+            %img(ng-src="{{::photo.image_url}}")
+      .col-12(ng-if="($index + 1) % 4 == 0")
+
+  .gutter-vertical-2x
+    %pagination(page="page" per-page="25" items-count="count")

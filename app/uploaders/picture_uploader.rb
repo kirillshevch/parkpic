@@ -19,11 +19,11 @@ class PictureUploader < CarrierWave::Uploader::Base
   end
 
   version :medium do
-    resize_to_fit(320, 320)
+    resize_to_fill(320, 320)
   end
 
   version :micro do
-    resize_to_fit(60, 60)
+    resize_to_fill(60, 60)
   end
 
   def default_url

@@ -4,6 +4,7 @@
 //= require ./pages/pages
 //= require ./settings/settings
 //= require ./shared/shared
+//= require ./members/members
 
 underscore = angular.module('underscore', [])
 underscore.factory '_', [
@@ -20,12 +21,13 @@ angular.module 'app', [
   "ngSanitize"
   "templates"
   "underscore"
+  "ngFileUpload"
   "app.core"
   "app.shared"
   "app.pages"
   "app.auth"
   "app.settings"
-  "ngFileUpload"
+  "app.members"
 ]
 
 angular
