@@ -1,7 +1,7 @@
-usersIndexCtrl = ($scope) ->
+membersIndexCtrl = ($scope) ->
 
-app.module "app.members"
+angular.module "app.members"
   .controller "membersIndexCtrl", [
     "$scope"
-    usersIndexCtrl
+    membersIndexCtrl
    ]
