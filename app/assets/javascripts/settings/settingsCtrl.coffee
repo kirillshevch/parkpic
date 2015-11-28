@@ -1,4 +1,4 @@
-settingsCtrl = ($scope, $rootScope)->
+settingsCtrl = ($scope, $rootScope, Users)->
 
   $scope.update = ->
     updateUser = {
@@ -8,8 +8,9 @@ settingsCtrl = ($scope, $rootScope)->
       about:       $rootScope.user.about
       email:       $rootScope.user.email
     }
-    console.log(updateUser)
+    Users.update {updateUser}, (response)->
+      console.log(response)
 
 angular
   .module('app.settings')
-  .controller('settingsCtrl', ['$scope', '$rootScope', settingsCtrl])
+  .controller('settingsCtrl', ['$scope', '$rootScope', 'Users', settingsCtrl])
