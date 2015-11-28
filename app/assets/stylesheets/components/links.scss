@@ -1,0 +1,31 @@
+a {
+  @include transition(color 200ms ease-out);
+}
+.link {
+  &-base {
+    &, &:hover {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+  &-dark {
+    color: inherit;
+    text-decoration: none;
+    &:hover {
+      color: black;
+    }
+  }
+  &-inherit {
+    color: inherit;
+    text-decoration: none;
+    &:hover {
+      color: $link-color;
+    }
+  }
+  &-danger {
+    color: $btn-danger-bg;
+    &:hover, &:focus {
+      color: darken($btn-danger-bg, 15%);
+    }
+  }
+}
