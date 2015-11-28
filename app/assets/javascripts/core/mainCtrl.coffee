@@ -8,6 +8,7 @@ mainCtrl = ($scope, Auth, $location, $rootScope) ->
     Auth.currentUser().then ((user) ->
       $scope.isAuthenticated = true
       $scope.ready = true
+      $rootScope.user = user
     ), (error) ->
       $scope.ready = true
 
