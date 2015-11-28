@@ -22,7 +22,6 @@
 /shared/*
 /config/database.yml
 /config/secrets.yml
-/public/assets
 /public/uploads
 /public/javascripts/translations.js
 /vendor/assets/bower_components
