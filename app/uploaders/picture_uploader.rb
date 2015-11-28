@@ -4,7 +4,6 @@ class PictureUploader < CarrierWave::Uploader::Base
 
   def filename
     "#{secure_token(10)}.#{file.extension}" if original_filename.present?
-    debugger
   end
 
   def store_dir
@@ -25,6 +24,10 @@ class PictureUploader < CarrierWave::Uploader::Base
 
   version :micro do
     resize_to_fit(60, 60)
+  end
+
+  def default_url
+    ActionController::Base.helpers.asset_path("/logo.svg")
   end
 
   def extension_white_list
