@@ -1,0 +1,14 @@
+$border-colors: (
+  ('light', #eee),
+  ('gray', #757575),
+);
+$bg-colors: (
+  ('white', #ffffff),
+  ('body', $body-bg),
+);
+
+$text-colors: (
+  ('superlight', #ccc),
+  ('light', #bbbbbb),
+  ('transparent', transparent),
+);

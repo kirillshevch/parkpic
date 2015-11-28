@@ -1,0 +1,11 @@
+@include utility(gutter, padding, $gutter);
+@include utility(row, margin, -$gutter);
+
+.text {
+  &-line {
+    @extend .gutter-bottom;
+  }
+  &-row {
+    @extend .gutter-bottom-2x;
+  }
+}
