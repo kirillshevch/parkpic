@@ -5,6 +5,8 @@
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
+    %script(type="text/javascript")
+      window.anonymousUser = #{!user_signed_in?}
   %body(ng-controller="mainCtrl")
     .navbar.navbar-default.navbar-static-top
       .container
@@ -12,9 +14,12 @@
           %a.navbar-brand(href="#") Parkpic
         .collapse.navbar-collapse
           %ul.nav.navbar-nav.pull-right
-            %li= link_to "Sign up", "/sign_up"
-            %li= link_to "Sign in", "/sign_in"
-    .container
-      %div(ng-view)
+            %li(ng-hide="user")
+              %a(ng-href="/sign_up") Sign up
+            %li(ng-hide="user")
+              %a(ng-href="/sign_in") Sign in
+            %li(ng-show="user")
+              %a(ng-href="/sign_in" ng-click="logout()") Sign out
+    .container(ng-view)
       %footer
-        %p &copy; Company 2015
+        %p &copy; Parkpic 2015

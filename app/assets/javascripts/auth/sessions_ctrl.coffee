@@ -5,12 +5,6 @@ sessionsCtrl = ->
       
     $scope.signinData = {}
 
-    $scope.logout = ->
-      Auth.logout().then ((oldUser) ->
-        $rootScope.user = undefined
-        $location.path '/sign_in'
-      ), (error) ->
-
     $scope.signIn = ->
       Auth.login($scope.signinData).then ((user) ->
         $rootScope.user = user

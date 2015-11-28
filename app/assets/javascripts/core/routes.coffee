@@ -12,6 +12,7 @@ angular.module('app.core')
       .when '/sign_in',
         templateUrl: 'auth/sign_in.html',
         controller: 'sessionsCtrl'
+
         
       .otherwise
         redirectTo: '/'

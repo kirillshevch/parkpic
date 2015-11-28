@@ -1,5 +1,5 @@
 mainCtrl = ($scope, Auth, $location, $rootScope) ->
-  if window.anonimusUser
+  if window.anonymousUser
     $scope.ready = true
     $scope.isAuthenticated = false
     $rootScope.user = null
@@ -11,6 +11,12 @@ mainCtrl = ($scope, Auth, $location, $rootScope) ->
       $rootScope.user = user
     ), (error) ->
       $scope.ready = true
+
+  $scope.logout = ->
+    Auth.logout().then ((oldUser) ->
+      $rootScope.user = undefined
+      $location.path '/sign_in'
+    ), (error) ->
 
 angular.module "app.core"
   .controller "mainCtrl", [
