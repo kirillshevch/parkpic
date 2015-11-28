@@ -4,6 +4,7 @@
 //= require ./pages/pages
 //= require ./settings/settings
 //= require ./shared/shared
+//= require ./members/members
 
 underscore = angular.module('underscore', [])
 underscore.factory '_', [
@@ -26,6 +27,7 @@ angular.module 'app', [
   "app.pages"
   "app.auth"
   "app.settings"
+  "app.members"
 ]
 
 angular

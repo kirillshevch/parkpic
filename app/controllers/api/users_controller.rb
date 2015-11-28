@@ -1,5 +1,5 @@
 class Api::UsersController < ApiController
-  def index;
+  def index
     respond_with @users.page(params[:page]).per(32)
   end
 
@@ -9,7 +9,7 @@ class Api::UsersController < ApiController
   end
 
   def show
-    respond with @user
+    respond_with @user
   end
 
   private

@@ -24,7 +24,6 @@ angular.module('app.core')
       .when '/members/:id',
         templateUrl: 'members/show.html',
         controller: 'membersShowCtrl'
-
       .otherwise
         redirectTo: '/'
   ])
