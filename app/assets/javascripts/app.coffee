@@ -1,5 +1,6 @@
 //= require_self
 //= require ./core/core
+//= require ./auth/auth
 //= require ./pages/pages
 //= require ./shared/shared
 
@@ -22,6 +23,7 @@ angular.module 'app', [
   "app.core"
   "app.shared"
   "app.pages"
+  "app.auth"
 ]
 
 angular

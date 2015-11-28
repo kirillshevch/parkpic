@@ -4,6 +4,7 @@ class PictureUploader < CarrierWave::Uploader::Base
 
   def filename
     "#{secure_token(10)}.#{file.extension}" if original_filename.present?
+    debugger
   end
 
   def store_dir
@@ -29,7 +30,6 @@ class PictureUploader < CarrierWave::Uploader::Base
   def extension_white_list
     %w(jpg jpeg png)
   end
-
   protected
 
   def secure_token(length=16)
