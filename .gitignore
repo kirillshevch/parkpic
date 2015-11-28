@@ -21,7 +21,6 @@
 /tmp
 /shared/*
 /config/database.yml
-/config/secrets.yml
 /public/uploads
 /public/javascripts/translations.js
 /vendor/assets/bower_components
