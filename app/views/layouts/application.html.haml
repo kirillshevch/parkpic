@@ -22,11 +22,11 @@
               .gutter-horizontal.border-bottom.border-wheat(ng-if="!user")
                 %a.gutter-vertical-sm.col-12(ng-href="/sign_up") Sign up
               .gutter-horizontal.border-bottom.border-wheat(ng-if="user")
-                %a.gutter-vertical-sm.col-12(ng-href="/profile") My Profile
+                %a.gutter-vertical-sm.col-12(ng-href="/members/{{user.id}}") My Profile
               .gutter-horizontal.border-bottom.border-wheat(ng-if="user")
-                %a.gutter-vertical-sm.col-12(ng-href="/Settings") Settings
+                %a.gutter-vertical-sm.col-12(ng-href="/members") Users
               .gutter-horizontal.border-bottom.border-wheat(ng-if="user")
-                %a.gutter-vertical-sm.col-12(ng-href="/users") Users
+                %a.gutter-vertical-sm.col-12(ng-href="/settings") Settings
               .gutter-horizontal.border-bottom.border-wheat(ng-if="user")
                 %a.gutter-vertical-sm.col-12(ng-href="/sign_in" ng-click="logout()") Sign out
       .table-cell.auto.content-center.align-top.relative.bg-white
