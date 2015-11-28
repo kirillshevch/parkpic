@@ -4,16 +4,12 @@
 
 # Parkpic
 
-## How to deploy
+## Before first deploy
+    $ heroku config:set KEY_BASE='your_key'
+    $ heroku config:set KEY_TOKEN='your_key'
 
-  Before first deploy:
-
-  $ heroku config:set KEY_BASE='your_key'
-  $ heroku config:set KEY_TOKEN='your_key'
-
-  Deploy:
-
-  $ rake assets:precomplie
-  $ git add .
-  $ git commit -m "add assets"
-  $ git push heroku your-branch:master
+## Deploy
+    $ rake assets:precomplie
+    $ git add .
+    $ git commit -m "add assets"
+    $ git push heroku your-branch:master
