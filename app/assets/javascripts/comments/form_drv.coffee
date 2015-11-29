@@ -9,7 +9,6 @@ commentsFormDirective = ->
     templateUrl: 'comments/form.html'
     controller: ["$scope", "Comment", ($scope, Comment) ->
       $scope.emojiMessage = {}
-      $scope.msg = ""
 
       if $scope.suffix == "" || !$scope.suffix
         commentsScope = $scope.$parent
@@ -18,7 +17,7 @@ commentsFormDirective = ->
 
       addedComment = (comment) ->
         $scope.emojiMessage = {}
-        $scope.msg = ""
+        $scope.msg = ''
         commentsScope.comments.push comment
         commentsScope.addedComments.push comment.id
         $scope.$parent.$parent.reply = false if $scope.$parent.$parent.reply
@@ -29,12 +28,15 @@ commentsFormDirective = ->
           commentable_type: $scope.commentableType
           body: $scope.msg
           comment_id: $scope.commentId
+
         Comment.create {comment: comment}, (comment) ->
           addedComment(comment)
     ]
     link: (scope, element) -> 
       element.bind 'keyup', (e) -> 
-        scope.submitComment() if e.which == 13
+        if e.which == 13
+          scope.submitComment() 
+          $(".emoji-wysiwyg-editor").text('')
       
 
 angular.module "app.comments"
