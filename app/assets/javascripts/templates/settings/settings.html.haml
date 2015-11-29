@@ -1,17 +1,32 @@
 .settings-form
-  .todo-head.settings-head
-    .todo-list-name
-      %p Settings
+  .text-line
+    .title-md.font-light
+      Settings
   .todo-form.settings-body
-    .form-group
-      %img(ng-src="{{$root.user.avatar.avatar.url}}" ng-if='$root.user.avatar')
-      %span(ngf-select="uploadAvatar(user.id)" ng-model="user.picAvatar" name="file" accept="image/*")
-        Change avatar
-    .form-group
-      %input.todo-input.form-control(type="text" ng-model="user.first_name" auto-save-input="update()" placeholder="First name")
-    .form-group
-      %input.todo-input.form-control(type="text" ng-model="user.last_name" auto-save-input="update()" placeholer="Last name")
-    .form-group
-      %textarea.todo-input.form-control(ng-model="user.about" auto-save-input="update()" placeholder="About")
-    .form-group
-      %input.todo-input.form-control(type="email" ng-model="user.email" auto-save-input="update()" placeholer="Email")
+    .text-row
+      .form-group
+        %img.img-preview-sm(ng-if="!user.picAvatar" ng-src="{{user.avatar}}")
+        %img.img-preview-sm(ngf-src="user.picAvatar")
+      .clearfix
+        %span.btn.btn-default(ngf-select="uploadAvatar(user.id)" ng-model="user.picAvatar" name="file" accept="image/*")
+          Change avatar
+    .row
+      .col-xs-4
+        .text-line
+          .gutter-bottom-sm.font-bold First Name
+          .clearfix
+            %input.form-control(type="text" ng-model="user.first_name" auto-save-input="update()" placeholder="First name")
+        .text-line
+          .gutter-bottom-sm.font-bold Last Name
+          .clearfix
+            %input.form-control(type="text" ng-model="user.last_name" auto-save-input="update()" placeholer="Last name")
+        .text-line
+          .gutter-bottom-sm.font-bold Email
+          .clearfix
+            %input.form-control(type="email" ng-model="user.email" auto-save-input="update()" placeholer="Email")
+    .row
+      .col-xs-8
+        .text-line
+          .gutter-bottom-sm.font-bold Greating
+          .clearfix
+            %textarea.form-control(ng-model="user.about" auto-save-input="update()" placeholder="About")

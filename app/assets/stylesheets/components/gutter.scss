@@ -36,9 +36,9 @@
 
 .text {
   &-line {
-    @extend .gutter-bottom-2x;
+    @extend .gutter-bottom;
   }
   &-row {
-    @extend .gutter-bottom;
+    @extend .gutter-bottom-2x;
   }
 }

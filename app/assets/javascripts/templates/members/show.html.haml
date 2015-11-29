@@ -6,8 +6,7 @@
       .col-xs-3
         .text-line
           .userpic
-            %img(ng-src="{{::photo.file.url}}")
-            %img(ng-src="{{::photo.image_url}}" bs-modal template-url="photos/show_modal.html")
+            %img(ng-src="{{::photo.file.url}}" bs-modal template-url="photos/show_modal.html")
       .col-12(ng-if="($index + 1) % 4 == 0")
 
   .gutter-vertical-2x

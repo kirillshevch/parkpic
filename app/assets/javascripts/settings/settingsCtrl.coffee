@@ -6,7 +6,6 @@ settingsCtrl = ($scope, $rootScope, Users, Upload)->
 
   $scope.uploadAvatar = ->
     Upload.upload(url: '/api/users/'+$rootScope.user.id, data: { user: { avatar: $rootScope.user.picAvatar }}, objectKey: '[k]', arrayKey: '[i]', method: 'PUT').then (response) ->
-      console.log(response.data)
 
 angular
   .module('app.settings')
