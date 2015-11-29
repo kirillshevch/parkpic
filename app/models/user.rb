@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   has_many :photos
   mount_uploader :avatar, PictureUploader
 
-  def to_json(arg)
+  def to_json
     ::Api::UserSerializer.new(self).to_json
   end
 end
