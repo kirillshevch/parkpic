@@ -1,3 +1,9 @@
-%p
-  %a(ng-href="/members/{{user.id}}") {{user.first_name}} {{user.last_name}}
-%p {{user.email}}
+.clearfix.text-center
+  .gutter-bottom-sm
+    %img.img-preview-md(ng-src="{{::user.avatar}}")
+  .clearfix.head-md
+    {{::user.first_name}} {{::user.last_name}}
+  .gutter-bottom-sm
+    %a(href="mailto:{{::user.email}}") {{::user.email}}
+  .text-row.text-sm.text-center {{::user.about}}
+

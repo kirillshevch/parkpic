@@ -1,3 +1,13 @@
+.#{$icomoon-prefix}-upload { 
+  &:before {
+    content: $icon-upload;
+  }
+}
+.#{$icomoon-prefix}-camera { 
+  &:before {
+    content: $icon-camera;
+  }
+}
 .#{$icomoon-prefix}-smile { 
   &:before {
     content: $icon-smile;

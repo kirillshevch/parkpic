@@ -31,4 +31,5 @@
                 %a.gutter-vertical-sm.col-12(ng-href="/sign_in" ng-click="logout()") Sign out
       .table-cell.auto.content-center.align-top.relative.bg-white
         .table.fixed
-          .table-cell.gutter-vertical.gutter-horizontal(ng-view)
+          .table-cell.gutter-vertical.gutter-horizontal
+            .col-12#content.position-relative(ng-view)

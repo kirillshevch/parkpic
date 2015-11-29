@@ -25,3 +25,4 @@
 //= require angular-emoji-popup/util
 //= require app
 //= require_tree ./templates
+//= require jquery/jquery
