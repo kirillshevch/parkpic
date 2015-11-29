@@ -9,4 +9,20 @@ class Api::PhotosController < ApiController
   def show
     respond_with @photo, serializer: Api::PhotoShowSerializer
   end
+
+  def create
+    @photo = Photo.new photo_params
+    @photo.user = current_user
+    if @photo.save
+      render json: @photo, serializer: Api::PhotoSerializer 
+    else
+      render json: {}
+    end
+  end
+
+  private
+
+  def photo_params
+    params.require(:photo).permit(:file, :description)
+  end
 end

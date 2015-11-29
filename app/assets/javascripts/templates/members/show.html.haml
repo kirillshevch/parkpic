@@ -1,13 +1,19 @@
-%h1(ng-show="user == member") Your profile
-%member-info(user="member")
 .clearfix
-  .clearfix
-    %span(ng-repeat="photo in member.photos track by $index")
+  %member-info(user="member")
+  .clearfix.text-center(ng-if="member.id == user.id")
+    .text-row
+      %member-pic-uploader
+  .clearfix(ng-if="photos.length")
+    %span(ng-repeat="photo in photos track by $index")
       .col-xs-3
         .text-line
           .userpic
-            %img(ng-src="{{::photo.file.url}}" bs-modal template-url="photos/show_modal.html")
+            %img(ng-src="{{::photo.image_url}}" bs-modal template-url="photos/show_modal.html")
       .col-12(ng-if="($index + 1) % 4 == 0")
+  .clearfix(ng-if="!photos.length")
+    .gutter-vertical-2x.text-center.color-light
+      .head-md=icon :palm
+      .clearfix Not photos yet
 
   .gutter-vertical-2x
     %pagination(page="page" per-page="25" items-count="count")

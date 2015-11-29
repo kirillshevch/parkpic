@@ -5,7 +5,7 @@ angular.module "app.core"
       show:   method: "GET"
       update: method: "PATCH"
   .factory "User", ($resource) ->
-    $resource "/api/users/", { id: "@id"},
+    $resource "/api/users/:id", { id: "@id"},
       index:  method: "GET"
       show:   method: "GET"
   .factory "Photo", ($resource) ->

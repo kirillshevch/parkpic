@@ -45,7 +45,15 @@
     #{$side}: 0; 
   }
 }
-.img-preview-sm {
-  width: 100%;
-  max-width: 100px;
+.img-preview {
+  &-sm {
+    width: 100%;
+    max-width: 100px;
+  }
+  &-md {
+    width: 100%;
+    max-width: 320px;
+    min-width: 320px;
+    border: 1px solid #eee;
+  }
 }

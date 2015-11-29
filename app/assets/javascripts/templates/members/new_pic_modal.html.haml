@@ -1,0 +1,16 @@
+.modal
+  .modal-dialog
+    .modal-content
+      .gutter-horizontal.gutter-vertical
+        .text-center
+          %img(ngf-src="newPic" style="max-width: 100%;")
+        .gutter-vertical-2x
+          .gutter-bottom-sm.font-bold Description
+          .clearfix
+            %textarea.form-control(ng-model="description")
+        .gutter-top.text-right
+          %button.btn.btn-default(ng-click="$hide()") Cancel
+          %button.btn.btn-success(ng-click="uploadData()") 
+            .smile=icon :upload
+            .smile.gutter-left-sm
+              Upload

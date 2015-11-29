@@ -17,5 +17,6 @@ Rails.application.routes.draw do
     resources :comments
     resources :photos
     resources :comments
+    post "/photos/new" => "photos#create"
   end
 end

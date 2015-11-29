@@ -1,6 +1,8 @@
 class Api::UsersController < ApiController
   def index
-    respond_with @users.page(params[:page]).per(32)
+    params[:page] ||= 1
+    response = { count: @users.count, page: params[:page], users: serialize_objects(@users.page(params[:page]).per(25), Api::UserSerializer)}
+    respond_with response
   end
 
   def update
