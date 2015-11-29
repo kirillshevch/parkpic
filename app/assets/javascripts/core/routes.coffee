@@ -2,8 +2,8 @@ angular.module('app.core')
   .config(['$routeProvider', ($routeProvider)->
     $routeProvider
       .when '/',
-        templateUrl: 'pages/index.html'
-        controller: 'indexPageCtrl'
+        templateUrl: 'members/index.html',
+        controller: 'membersIndexCtrl'
 
       .when '/sign_up',
         templateUrl: 'auth/sign_up.html',

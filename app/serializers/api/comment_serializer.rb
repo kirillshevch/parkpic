@@ -1,6 +1,9 @@
 class Api::CommentSerializer < ActiveModel::Serializer 
   attributes :id, :body, :comment_id, :created_at, :tread_level, :path
   has_one :user
+  def body
+    CGI.escapeHTML object.body
+  end
   def tread_level
     if object.path
       object.path.split(".").count
