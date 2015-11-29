@@ -5,8 +5,7 @@ FactoryGirl.define do
     last_name { Faker::Name.last_name }
     about { Faker::Lorem.sentence }
     password 'testing1'
-    password_confirmation 'testing1'
-    photos { create_list(:photo, 120) }
+  #  photos { create_list(:photo, 120) }
   end
 
 end
